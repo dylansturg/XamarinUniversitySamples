@@ -9,24 +9,30 @@ using Android.OS;
 
 namespace XamarinUniversity
 {
-	[Activity (Label = "XamarinUniversity", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "XamarinUniversity", MainLauncher = true, Icon = "@drawable/Icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
+		private ListView _instructorList;
+		private IListAdapter _instructorsAdapter;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
-			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
+			_instructorList = FindViewById<ListView> (Resource.Id.instructor_list);
+			_instructorsAdapter = new ArrayAdapter<Instructor> (this, Android.Resource.Layout.SimpleListItem1, InstructorData.Instructors);
+			_instructorList.Adapter = _instructorsAdapter;
+
+			_instructorList.ItemClick += (sender, e) => 
+			{
+				var selectedInstructor = InstructorData.Instructors[e.Position];
+				var alertBuilder = new AlertDialog.Builder(this);
+				alertBuilder.SetTitle("Clicked An Instructor");
+				alertBuilder.SetMessage(selectedInstructor.Name);
+				alertBuilder.SetNeutralButton("OK", (s, args)=> {});
+				var alert = alertBuilder.Create();
+				alert.Show();
 			};
 		}
 	}
