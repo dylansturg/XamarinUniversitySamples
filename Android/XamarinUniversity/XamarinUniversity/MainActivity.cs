@@ -23,6 +23,7 @@ namespace XamarinUniversity
 			_instructorList = FindViewById<ListView> (Resource.Id.instructor_list);
 			_instructorsAdapter = new InstructorAdapter (this, InstructorData.Instructors);
 			_instructorList.Adapter = _instructorsAdapter;
+			_instructorList.FastScrollEnabled = true;
 
 			_instructorList.ItemClick += (sender, e) => 
 			{

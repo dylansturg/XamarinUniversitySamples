@@ -6,10 +6,14 @@ using Android.Views;
 
 namespace XamarinUniversity
 {
-	public class InstructorAdapter : BaseAdapter<Instructor>
+	public class InstructorAdapter : BaseAdapter<Instructor>, ISectionIndexer
 	{
 		private List<Instructor> _instructors;
 		private Context _context;
+
+		private Java.Lang.Object[] _sectionHeaders;
+		private Dictionary<int, int> _positionsForSectionMap;
+		private Dictionary<int, int> _sectionForPositionsMap;
 
 		public override Instructor this [int position] { get { return _instructors [position]; } }
 
@@ -23,6 +27,10 @@ namespace XamarinUniversity
 		{
 			_instructors = instructors;
 			_context = ctx;
+
+			_sectionHeaders = SectionIndexerBuilder.BuildSectionHeaders (instructors);
+			_sectionForPositionsMap = SectionIndexerBuilder.BuildSectionForPositionMap (instructors);
+			_positionsForSectionMap = SectionIndexerBuilder.BuildPositionForSectionMap (instructors);
 		}
 
 		public override long GetItemId (int position)
@@ -34,20 +42,38 @@ namespace XamarinUniversity
 		{
 			if (convertView == null) {
 				convertView = LayoutInflater.FromContext (_context).Inflate (Resource.Layout.InstructorListItem, parent, false);
+				var holder = new ViewHolder 
+				{
+					Name = convertView.FindViewById<TextView> (Resource.Id.instructor_title),
+					Specialty = convertView.FindViewById<TextView> (Resource.Id.instructor_detail),
+					Photo = convertView.FindViewById<ImageView> (Resource.Id.instructor_image)
+				};
+
+				convertView.Tag = holder;
 			}
 
 			var instructor = _instructors [position];
-			var nameView = convertView.FindViewById<TextView> (Resource.Id.instructor_title);
-			var specialityView = convertView.FindViewById<TextView> (Resource.Id.instructor_detail);
-			var instructorImage = convertView.FindViewById<ImageView> (Resource.Id.instructor_image);
+			var cachedViews = (ViewHolder) convertView.Tag;
 
-			nameView.Text = instructor.Name;
-			specialityView.Text = instructor.Specialty;
-
-			var instructorDrawable = Android.Graphics.Drawables.Drawable.CreateFromStream (_context.Assets.Open (instructor.ImageUrl), null);
-			instructorImage.SetImageDrawable (instructorDrawable);
+			cachedViews.Name.Text = instructor.Name;
+			cachedViews.Specialty.Text = instructor.Specialty;
+			cachedViews.Photo.SetImageDrawable (ImageAssetManager.Get(_context, instructor.ImageUrl));
 
 			return convertView;
+		}
+
+
+		public int GetPositionForSection (int sectionIndex)
+		{
+			return _positionsForSectionMap [sectionIndex];
+		}
+		public int GetSectionForPosition (int position)
+		{
+			return _sectionForPositionsMap [position];
+		}
+		public Java.Lang.Object[] GetSections ()
+		{
+			return _sectionHeaders;
 		}
 	}
 }
