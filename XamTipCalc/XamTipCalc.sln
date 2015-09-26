@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamTipCalc", "XamTipCalc\XamTipCalc.csproj", "{916E7439-884D-450B-8826-B3BD5215FDCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamTipCalc.UITests", "XamTipCalc.UITests\XamTipCalc.UITests.csproj", "{07DA4115-9260-4AEC-8C88-5B82B520C2C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07DA4115-9260-4AEC-8C88-5B82B520C2C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07DA4115-9260-4AEC-8C88-5B82B520C2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07DA4115-9260-4AEC-8C88-5B82B520C2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07DA4115-9260-4AEC-8C88-5B82B520C2C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{916E7439-884D-450B-8826-B3BD5215FDCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916E7439-884D-450B-8826-B3BD5215FDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916E7439-884D-450B-8826-B3BD5215FDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916E7439-884D-450B-8826-B3BD5215FDCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
