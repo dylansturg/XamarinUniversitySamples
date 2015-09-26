@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalculator", "TipCalculator\TipCalculator.csproj", "{BA070DDC-001C-43DA-87FB-8BC17044DBB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalculator.UITests", "TipCalculator.UITests\TipCalculator.UITests.csproj", "{36C581C9-2996-4814-9542-085DCEF04397}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36C581C9-2996-4814-9542-085DCEF04397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C581C9-2996-4814-9542-085DCEF04397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C581C9-2996-4814-9542-085DCEF04397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C581C9-2996-4814-9542-085DCEF04397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA070DDC-001C-43DA-87FB-8BC17044DBB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA070DDC-001C-43DA-87FB-8BC17044DBB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA070DDC-001C-43DA-87FB-8BC17044DBB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA070DDC-001C-43DA-87FB-8BC17044DBB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
