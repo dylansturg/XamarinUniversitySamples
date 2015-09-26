@@ -21,7 +21,7 @@ namespace XamarinUniversity
 			SetContentView (Resource.Layout.Main);
 
 			_instructorList = FindViewById<ListView> (Resource.Id.instructor_list);
-			_instructorsAdapter = new ArrayAdapter<Instructor> (this, Android.Resource.Layout.SimpleListItem1, InstructorData.Instructors);
+			_instructorsAdapter = new InstructorAdapter (this, InstructorData.Instructors);
 			_instructorList.Adapter = _instructorsAdapter;
 
 			_instructorList.ItemClick += (sender, e) => 
