@@ -53,6 +53,7 @@
     <Compile Include="ImageAssetManager.cs" />
     <Compile Include="ViewHolder.cs" />
     <Compile Include="SectionIndexerBuilder.cs" />
+    <Compile Include="InstructorDetailsActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -64,6 +65,7 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\layout\InstructorListItem.axml" />
+    <AndroidResource Include="Resources\layout\InstructorDetails.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

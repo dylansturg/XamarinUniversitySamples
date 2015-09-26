@@ -27,13 +27,9 @@ namespace XamarinUniversity
 
 			_instructorList.ItemClick += (sender, e) => 
 			{
-				var selectedInstructor = InstructorData.Instructors[e.Position];
-				var alertBuilder = new AlertDialog.Builder(this);
-				alertBuilder.SetTitle("Clicked An Instructor");
-				alertBuilder.SetMessage(selectedInstructor.Name);
-				alertBuilder.SetNeutralButton("OK", (s, args)=> {});
-				var alert = alertBuilder.Create();
-				alert.Show();
+				var detailsIntent = new Intent(this, typeof(InstructorDetailsActivity));
+				detailsIntent.PutExtra("position", e.Position);
+				StartActivity(detailsIntent);
 			};
 		}
 	}
