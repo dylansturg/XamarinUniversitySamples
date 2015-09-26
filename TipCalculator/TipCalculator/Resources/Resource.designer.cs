@@ -60,8 +60,29 @@ namespace TipCalculator
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050002
+			public const int linearLayout1 = 2131034114;
+			
+			// aapt resource value: 0x7f050005
+			public const int linearLayout2 = 2131034117;
+			
+			// aapt resource value: 0x7f050001
+			public const int myButton = 2131034113;
+			
 			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			public const int price_input = 2131034112;
+			
+			// aapt resource value: 0x7f050003
+			public const int textView1 = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int textView2 = 2131034116;
+			
+			// aapt resource value: 0x7f050006
+			public const int tip_display = 2131034118;
+			
+			// aapt resource value: 0x7f050007
+			public const int total_display = 2131034119;
 			
 			static Id()
 			{
@@ -95,8 +116,20 @@ namespace TipCalculator
 			// aapt resource value: 0x7f040001
 			public const int app_name = 2130968577;
 			
+			// aapt resource value: 0x7f040002
+			public const int calculate = 2130968578;
+			
 			// aapt resource value: 0x7f040000
 			public const int hello = 2130968576;
+			
+			// aapt resource value: 0x7f040005
+			public const int input_hint = 2130968581;
+			
+			// aapt resource value: 0x7f040003
+			public const int tip = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int total = 2130968580;
 			
 			static String()
 			{
