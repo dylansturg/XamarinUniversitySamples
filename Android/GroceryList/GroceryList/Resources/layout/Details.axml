@@ -3,19 +3,16 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <Button
-        android:id="@+id/items_button"
+    <TextView
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/items" />
-    <Button
-        android:text="@string/add_item"
+        android:id="@+id/details_name_field" />
+    <TextView
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/add_item_button" />
-    <Button
-        android:text="@string/about"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/about_button" />
+        android:id="@+id/details_count_field" />
 </LinearLayout>

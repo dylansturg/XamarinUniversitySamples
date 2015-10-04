@@ -60,8 +60,47 @@ namespace GroceryList
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050002
+			public const int about_button = 2131034114;
+			
 			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			public const int about_layout = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int about_text = 2131034113;
+			
+			// aapt resource value: 0x7f05000d
+			public const int add_item_button = 2131034125;
+			
+			// aapt resource value: 0x7f050008
+			public const int cancel_button = 2131034120;
+			
+			// aapt resource value: 0x7f050006
+			public const int count_field = 2131034118;
+			
+			// aapt resource value: 0x7f050005
+			public const int count_label = 2131034117;
+			
+			// aapt resource value: 0x7f05000a
+			public const int details_count_field = 2131034122;
+			
+			// aapt resource value: 0x7f050009
+			public const int details_name_field = 2131034121;
+			
+			// aapt resource value: 0x7f05000c
+			public const int items_button = 2131034124;
+			
+			// aapt resource value: 0x7f05000b
+			public const int items_list = 2131034123;
+			
+			// aapt resource value: 0x7f050004
+			public const int name_field = 2131034116;
+			
+			// aapt resource value: 0x7f050003
+			public const int name_label = 2131034115;
+			
+			// aapt resource value: 0x7f050007
+			public const int save_button = 2131034119;
 			
 			static Id()
 			{
@@ -77,7 +116,19 @@ namespace GroceryList
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int About = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int AddItem = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int Details = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int Items = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int Main = 2130903044;
 			
 			static Layout()
 			{
@@ -92,11 +143,35 @@ namespace GroceryList
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
+			// aapt resource value: 0x7f040003
+			public const int about = 2130968579;
+			
+			// aapt resource value: 0x7f040002
+			public const int add_item = 2130968578;
 			
 			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			public const int app_name = 2130968576;
+			
+			// aapt resource value: 0x7f040007
+			public const int cancel = 2130968583;
+			
+			// aapt resource value: 0x7f040006
+			public const int count = 2130968582;
+			
+			// aapt resource value: 0x7f040008
+			public const int details = 2130968584;
+			
+			// aapt resource value: 0x7f040001
+			public const int items = 2130968577;
+			
+			// aapt resource value: 0x7f040009
+			public const int learn_more = 2130968585;
+			
+			// aapt resource value: 0x7f040005
+			public const int name = 2130968581;
+			
+			// aapt resource value: 0x7f040004
+			public const int save = 2130968580;
 			
 			static String()
 			{

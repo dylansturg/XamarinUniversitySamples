@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">GroceryList</string>
+	<string name="app_name">Grocery List</string>
+
+	<string name="items">Items</string>
+	<string name="add_item">Add Item</string>
+	<string name="about">About</string>
+	<string name="save">Save</string>
+	<string name="name">Name</string>
+	<string name="count">Count</string>
+	<string name="cancel">Cancel</string>
+	<string name="details">Details</string>
+	<string name="learn_more">Learn More</string>
+
 </resources>

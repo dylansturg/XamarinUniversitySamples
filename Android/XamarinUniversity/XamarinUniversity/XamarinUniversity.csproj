@@ -66,6 +66,7 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\layout\InstructorListItem.axml" />
     <AndroidResource Include="Resources\layout\InstructorDetails.axml" />
+    <AndroidResource Include="Resources\layout\vocation_cell.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

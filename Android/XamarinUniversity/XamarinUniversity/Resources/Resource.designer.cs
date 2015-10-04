@@ -84,6 +84,12 @@ namespace XamarinUniversity
 			// aapt resource value: 0x7f050002
 			public const int specialtyTextView = 2131034114;
 			
+			// aapt resource value: 0x7f050008
+			public const int vocation_cell_image = 2131034120;
+			
+			// aapt resource value: 0x7f050009
+			public const int vocation_cell_text = 2131034121;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -105,6 +111,9 @@ namespace XamarinUniversity
 			
 			// aapt resource value: 0x7f030002
 			public const int Main = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int vocation_cell = 2130903043;
 			
 			static Layout()
 			{

@@ -12,22 +12,44 @@ namespace GroceryList
 	[Activity (Label = "GroceryList", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
+		Item[] items = {
+			new Item{
+				Name = "Milk",
+				Count = 1,
+			},
 
+			new Item{
+				Name = "Eggs",
+				Count = 12
+			},
+
+			new Item{
+				Name = "Cake",
+				Count = 9000,
+			}
+		};
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
-			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
+			var itemListButton = FindViewById<Button> (Resource.Id.items_button);
+			itemListButton.Click += (sender, e) => {
+				var intent = new Intent (this, typeof(ItemsActivity));
+				intent.PutExtra("items", items);
+				StartActivity (intent);
 			};
+
+			var addItemButton = FindViewById<Button> (Resource.Id.add_item_button);
+			addItemButton.Click += (sender, e) => {
+				StartActivity (new Intent (this, typeof(AddItemActivity)));
+			};
+
+			var aboutButton = FindViewById<Button> (Resource.Id.about_button);
+			aboutButton.Click += (sender, e) => {
+				StartActivity (new Intent (this, typeof(AboutActivity)));
+			};
+
 		}
 	}
 }
