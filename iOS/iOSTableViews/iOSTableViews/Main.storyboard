@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="-11"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="3">
+            <objects>
+                <tableViewController id="4" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8">
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8" id="9">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4" id="6"/>
+                            <outlet property="delegate" destination="4" id="7"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="31" kind="presentation" identifier="PresentDetails" id="436"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="8"/>
+        </scene>
+        <!--Email Message View Controller-->
+        <scene sceneID="30">
+            <objects>
+                <viewController id="31" customClass="EmailMessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="28"/>
+                        <viewControllerLayoutGuide type="bottom" id="29"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="32">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="35">
+                                <rect key="frame" x="40" y="64" width="520" height="363.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="40">
+                                <rect key="frame" x="40" y="466.5" width="520" height="20.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44">
+                                <rect key="frame" x="40" y="547" width="520" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" red="0.19215686274509805" green="0.30588235294117649" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="GoBackButton_TouchUpInside:" destination="31" eventType="touchUpInside" id="539"/>
+                                    <segue destination="34" kind="unwind" unwindAction="UnwindToTableViewController" id="496"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="35" firstAttribute="top" secondItem="32" secondAttribute="top" constant="64" id="37"/>
+                            <constraint firstItem="40" firstAttribute="top" secondItem="35" secondAttribute="bottom" constant="39" id="41"/>
+                            <constraint firstItem="40" firstAttribute="centerX" secondItem="32" secondAttribute="centerX" id="42"/>
+                            <constraint firstItem="35" firstAttribute="centerX" secondItem="32" secondAttribute="centerX" id="43"/>
+                            <constraint firstItem="44" firstAttribute="centerX" secondItem="35" secondAttribute="centerX" id="54"/>
+                            <constraint firstItem="44" firstAttribute="centerX" secondItem="40" secondAttribute="centerX" id="55"/>
+                            <constraint firstItem="44" firstAttribute="centerX" secondItem="32" secondAttribute="centerX" id="56"/>
+                            <constraint firstAttribute="bottom" secondItem="44" secondAttribute="bottom" constant="20" id="57"/>
+                            <constraint firstItem="44" firstAttribute="leading" secondItem="32" secondAttribute="leading" constant="40" id="58"/>
+                            <constraint firstAttribute="trailing" secondItem="44" secondAttribute="trailing" constant="40" id="59"/>
+                            <constraint firstItem="35" firstAttribute="leading" secondItem="32" secondAttribute="leading" constant="40" id="60"/>
+                            <constraint firstAttribute="trailing" secondItem="35" secondAttribute="trailing" constant="40" id="61"/>
+                            <constraint firstItem="40" firstAttribute="leading" secondItem="32" secondAttribute="leading" constant="40" id="62"/>
+                            <constraint firstAttribute="trailing" secondItem="40" secondAttribute="trailing" constant="40" id="63"/>
+                            <constraint firstItem="44" firstAttribute="top" secondItem="40" secondAttribute="bottom" constant="60" id="64"/>
+                            <constraint firstItem="44" firstAttribute="centerX" secondItem="32" secondAttribute="centerX" id="509"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BodyLabel" destination="40" id="name-outlet-40"/>
+                        <outlet property="GoBackButton" destination="44" id="name-outlet-44"/>
+                        <outlet property="SubjectLabel" destination="35" id="name-outlet-35"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="34" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="763"/>
+        </scene>
+    </scenes>
+</document>
